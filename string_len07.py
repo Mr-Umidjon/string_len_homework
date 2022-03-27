@@ -8,16 +8,16 @@ def main(s1, s2, s3):
     Returns:
         string
     """
-    ans = "\"["
+    ans = "["
     if len(s1) % 2 == 1:
         ans += s1
     if len(s2) % 2 == 1:
         ans += f", {s2}"
     if len(s3) % 2 == 1:
         ans += f", {s3}"
-    # if ans == '[]':
-    #     return "[]"
-    ans += "]\""
+    if ans == '[':
+        return "[]"
+    ans += "]"
     return ans
 
 # print(main(s1="codeschool.uz", s2="example", s3="python"))
