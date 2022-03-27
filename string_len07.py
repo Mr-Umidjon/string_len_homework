@@ -15,8 +15,10 @@ def main(s1, s2, s3):
         ans += f", {s2}"
     if len(s3) % 2 == 1:
         ans += f", {s3}"
+    if ans == '[]':
+        return "[]"
     ans += "]"
     return ans
 
 
-print(main(s1="codeschool.uz", s2="example", s3="python"))
+# print(main(s1="codeschool.uz", s2="example", s3="python"))
