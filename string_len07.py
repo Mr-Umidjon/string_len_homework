@@ -12,8 +12,8 @@ def main(s1, s2, s3):
     if len(s1) % 2 == 1:
         ans += s1
     if len(s2) % 2 == 1:
-        ans += ", " + s2
+        ans += "," + s2
     if len(s3) % 2 == 1:
-        ans += ", " + s3
+        ans += "," + s3
     ans += "]"
     return ans
