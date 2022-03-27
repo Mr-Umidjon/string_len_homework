@@ -8,38 +8,22 @@ def main(s1, s2, s3):
     Returns:
         string
     """
-    # ans = "["
-    # if len(s1) % 2 == 1:
-    #     ans += s1
-    # if len(s2) % 2 == 1:
-    #     ans += f", {s2}"
-    # if len(s3) % 2 == 1:
-    #     ans += f", {s3}"
-    # ans += "]"
-    # return ans
     l1 = len(s1) % 2
     l2 = len(s2) % 2
     l3 = len(s3) % 2
-
-    ans = '['
-    if l1 + l2 + l3 == 3:
+    if l1 + l2 + l3 == 0:
+        return '[]'
+    if l1 and l2 and l3:
         ans = f"[{s1}, {s2}, {s3}]"
-    elif l1 + l2 + l3 == 2:
-        if l1 == 1:
-            ans += s1
-        if l2 == 1:
-            ans += f", {s2}"
-        if l3 == 1:
-            ans += f", {s3}"
-        ans += "]"
+    elif l1 and l2:
+        ans = f"[{s1}, {s2}]"
+    elif l1 and l3:
+        ans = f"[{s1}, {s3}]"
+    elif l2 and l3:
+        ans = f"[{s2}, {s3}]"
     else:
-        if l1 == 1:
-            ans += s1
-        if l2 == 1:
-            ans += f", {s2}"
-        if l3 == 1:
-            ans += f", {s3}"
-        ans += "]"
+        ans = f"[{s1 * l1}{s2 * l2}{s3 * l3}]"
+
     return ans
 
 
